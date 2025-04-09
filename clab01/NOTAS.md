@@ -14,14 +14,16 @@ La topología tiene como objetivo practicar:
 
 ## 🧱 Estructura de la topología
 
-```
-        srl1
-       /    \
-    srl2    srl3
-       \    /
-        srl4
-          |
-        srl5
+``` mermaid
+---
+title: sr01
+---
+graph TD
+  srl1---srl3
+  srl2---srl4
+  srl3---srl4
+  srl4---srl5
+  srl1---srl2
 ```
 
 ## 🔗 Enlaces configurados
