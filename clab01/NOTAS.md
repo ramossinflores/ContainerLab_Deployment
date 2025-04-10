@@ -14,17 +14,16 @@ La topología tiene como objetivo practicar:
 
 ## 🧱 Estructura de la topología
 
-``` mermaid
----
-title: sr01
----
-graph TD
-  srl1---srl3
-  srl2---srl4
-  srl3---srl4
-  srl4---srl5
-  srl1---srl2
 ```
+         srl1
+        /    \
+     srl2    srl3
+        \    /
+         srl4
+           |
+         srl5
+ ```
+
 
 ## 🔗 Enlaces configurados
 
@@ -89,3 +88,12 @@ srl1 - ethernet-1/2 → 10.10.0.18/30
 - La mejor manera de estructurar los enlaces es visualmente usando graph después del deployment (en todas sus variantes)
 - Es muy útil el `startup-config` para que cada router arranque con su archivo propio.
 - Containerlab facilita el despliegue, pero requiere atención al detalle en las interfaces para que no haya conflictos.
+
+
+## : Nuevos hitos 
+- Ping de r1 a r5: Pensad cómo hacer que funcione un ping desde r1 a r5.
+- Configuraciones de routers: Podéis tener varios archivos de configuración, como r1.cfg y r1-routes.cfg, y subirlos al GitHub.
+- Protocolos de routing dinámico(MUY OPCIONAL): Si os atrevéis, podéis montar protocolos de routing dinámico en SR Linux,
+- Hosts en la topología: Añadid hosts directamente en la topología, como Ubuntu y Alpine, o la distro de Linux que queráis.
+- Captura de tráfico: Podéis capturar tráfico, aunque no haya mucho que analizar.
+- Simular problemas en interfaces: Si montáis el entorno en un Ubuntu en VMWare, podéis establecer latencia, jitter, packet loss, etc.

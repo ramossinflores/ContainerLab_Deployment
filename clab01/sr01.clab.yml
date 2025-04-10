@@ -22,11 +22,9 @@ topology:
     srl5:
       kind: nokia_srlinux
       startup-config: cfg-clab-sr01/srl5.cfg
-
   links:
     - endpoints: ["srl1:ethernet-1/1", "srl2:ethernet-1/1"]
     - endpoints: ["srl1:ethernet-1/2", "srl3:ethernet-1/1"]
     - endpoints: ["srl2:ethernet-1/2", "srl4:ethernet-1/1"]
     - endpoints: ["srl3:ethernet-1/2", "srl4:ethernet-1/2"]
     - endpoints: ["srl4:ethernet-1/3", "srl5:ethernet-1/1"]
-
