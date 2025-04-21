@@ -28,3 +28,4 @@ topology:
     - endpoints: ["srl2:ethernet-1/2", "srl4:ethernet-1/1"]
     - endpoints: ["srl3:ethernet-1/2", "srl4:ethernet-1/2"]
     - endpoints: ["srl4:ethernet-1/3", "srl5:ethernet-1/1"]
+
