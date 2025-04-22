@@ -53,7 +53,7 @@ srl4 - ethernet-1/1 → 10.10.0.6/30
 
 srl4 - ethernet-1/3 → 10.10.0.9/30
 
-srl5 - ethernet-1/1 → 10.10.0.10/30
+srl5 - ethernet-1/1 → 10.10.0.10/30 
 
 **srl4 ↔ srl3 (10.10.0.12/30)**
 
@@ -90,7 +90,7 @@ srl1 - ethernet-1/2 → 10.10.0.18/30
 - Containerlab facilita el despliegue, pero requiere atención al detalle en las interfaces para que no haya conflictos.
 
 
-## : Nuevos hitos 
+## ⭐ Nuevos hitos 
 - Ping de r1 a r5: Pensad cómo hacer que funcione un ping desde r1 a r5.
 - Configuraciones de routers: Podéis tener varios archivos de configuración, como r1.cfg y r1-routes.cfg, y subirlos al GitHub.
 - Protocolos de routing dinámico(MUY OPCIONAL): Si os atrevéis, podéis montar protocolos de routing dinámico en SR Linux,
