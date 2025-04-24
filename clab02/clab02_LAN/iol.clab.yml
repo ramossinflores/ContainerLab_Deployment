@@ -1,0 +1,37 @@
+name: iol_lan
+topology:
+  nodes:
+    router1:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:1.0.0
+      startup-config: cfg/router1.txt.partial
+    router2:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:1.0.0
+      startup-config: cfg/router2.txt.partial
+    router3:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:1.0.0
+      startup-config: cfg/router3.txt.partial
+    router4:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:1.0.0
+      startup-config: cfg/router4.txt.partial
+    router5:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:1.0.0
+      startup-config: cfg/router5.txt.partial
+    switch1:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:L2-1.0.0
+      type: L2
+    switch2:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:L2-1.0.0
+      type: L2
+  links:
+    - endpoints: ["router1:Ethernet0/1","switch1:Ethernet0/1"]
+    - endpoints: ["router2:Ethernet0/1","switch1:Ethernet0/2"]
+    - endpoints: ["router3:Ethernet0/1","switch1:Ethernet0/3"]
+    - endpoints: ["router4:Ethernet0/1","switch2:Ethernet0/1"]
+    - endpoints: ["router5:Ethernet0/1","switch2:Ethernet0/2"]
