@@ -46,8 +46,22 @@ Este es el segundo laboratorio de prácticas con Containerlab y dispositivos Cis
 
 ### Objetivo:
 
-> Garantizar conectividad entre hosts que pertenecen a la misma VLAN, incluso si están en diferentes switches, usando trunking.
-> 
+> Garantizar conectividad entre hosts que pertenecen a la misma VLAN, incluso si están en diferentes switches, usando el protocolo VLAN Trunking Protocol (VTP) de Cisco, un protocolo propietario que se usa para gestionar y distribuir información de VLANs dentro de una red de switches.
+
+**Explicación rápida de VTP**
+- El VTP facilita la administración de VLANs al propagar automáticamente la información de VLAN (ID, nombre, estado) entre switches.
+
+- Funciona solo en enlaces tipo trunk.
+
+- Solo los switches en el mismo "VTP domain" comparten información.
+
+- Hay tres modos de operación:
+
+1. Server: Puede crear, modificar y borrar VLANs y distribuye esta info.
+
+2. Client: No puede modificar VLANs; solo recibe y aplica cambios.
+
+3. Transparent: No participa en VTP, pero sí reenvía los mensajes VTP.
 
 ### Configuraciones:
 
